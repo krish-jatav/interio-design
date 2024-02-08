@@ -5,8 +5,29 @@ var router = express.Router();
 router.get("/", function(req, res, next) {
     res.render("index");
 });
+router.get("/index", function(req, res, next) {
+    res.render("index");
+});
 router.get("/design", function(req, res, next) {
     res.render("design");
+});
+router.get("/kitchen", function(req, res, next) {
+    res.render("kitchen");
+});
+router.get("/badroom", function(req, res, next) {
+    res.render("badroom");
+});
+router.get("/livingroom", function(req, res, next) {
+    res.render("livingroom");
+});
+router.get("/bathroom", function(req, res, next) {
+    res.render("bathroom");
+});
+router.get("/diningroom", function(req, res, next) {
+    res.render("diningroom");
+});
+router.get("/Wardrobe", function(req, res, next) {
+    res.render("Wardrobe");
 });
 
 module.exports = router;

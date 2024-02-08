@@ -27,8 +27,7 @@ function init() {
         },
         // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
         pinType: document.querySelector("#main").style.transform ?
-            "transform" :
-            "fixed",
+            "transform" : "fixed",
     });
 
     // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
@@ -38,3 +37,12 @@ function init() {
     ScrollTrigger.refresh();
 }
 init();
+var navPage = document.querySelector(".navpage");
+var menu = document.querySelector(".menu");
+var imgShow = document.querySelector(".img-show");
+var box = document.querySelector(".card");
+var box1 = document.querySelector(".img1");
+
+menu.addEventListener("click", function() {
+    navPage.style.display = navPage.style.display === "block" ? "none" : "block";
+});
